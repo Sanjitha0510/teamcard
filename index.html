@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meet the Team</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Meet the Team</h1>
+    <p>Get to know our amazing team members!</p>
+  </header>
+
+  <section class="search-section">
+    <label for="searchInput" class="visually-hidden">Search team members</label>
+    <input
+      type="search"
+      id="searchInput"
+      placeholder="Search team members by name or role..."
+      aria-label="Search team members"
+      autocomplete="off"
+    />
+  </section>
+
+  <main class="team-container" aria-label="Team Members">
+    <article class="team-card" tabindex="0" role="button" aria-pressed="false" data-member="0" aria-describedby="desc-james">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="./imag1.jpg" alt="James Anderson" loading="lazy" />
+          <h2>James Anderson</h2>
+          <p class="role">Frontend Developer</p>
+        </div>
+        <div class="card-back">
+          <p id="desc-james">James is a passionate frontend developer with 5 years of experience in React and Vue.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="team-card" tabindex="0" role="button" aria-pressed="false" data-member="1" aria-describedby="desc-olivia">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="./imag2.jpg" alt="Olivia Brown" loading="lazy" />
+          <h2>Olivia Brown</h2>
+          <p class="role">Backend Developer</p>
+        </div>
+        <div class="card-back">
+          <p id="desc-olivia">Olivia specializes in scalable backend systems and database design with Node.js and Python.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="team-card" tabindex="0" role="button" aria-pressed="false" data-member="2" aria-describedby="desc-emma">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="./imag3.jpg" alt="Emma Johnson" loading="lazy" />
+          <h2>Emma Johnson</h2>
+          <p class="role">UI/UX Designer</p>
+        </div>
+        <div class="card-back">
+          <p id="desc-emma">Emma crafts beautiful and user-friendly interfaces with a keen eye for detail.</p>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc" hidden>
+    <div class="modal-content" role="document">
+      <button id="modal-close" aria-label="Close modal">&times;</button>
+      <img id="modal-img" src="" alt="" />
+      <h2 id="modal-title"></h2>
+      <h3 id="modal-role"></h3>
+      <p id="modal-desc"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
